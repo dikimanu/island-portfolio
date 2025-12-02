@@ -123,39 +123,40 @@ export const socialLinks = [
 /*             PROJECTS                  */
 /* ------------------------------------ */
 export const projects = [
-{
-name: "Island 3D Portfolio",
-description: "My first 3D portfolio made with React.js. Simple and static site but designed with gradient color combinations, created some 3d models. Modern and cool look.",
-link: "https://island-portfolio-delta.vercel.app/",
-youtubeUrl: "https://www.youtube.com/embed/"
-},    
-{
-name: "Full Stack Food Delivery Website",
-description: "Full stack food delivery site made with MERN. Three sections - frontend, admin and backend. Frontend allows users to login, add food items to cart, etc. Admin can manage users and items.",
-link: "https://food-delivery-ruddy-five-32.vercel.app/",
-youtubeUrl: "https://www.youtube.com/embed/UsKqKB78z-U"
-},
-{
-name: "Portfolio",
-description: "My first portfolio made with Next.js. Simple and static site with a few interactive sections. Modern and cool look.",
-link: "https://portfolio-821i.vercel.app/",
-youtubeUrl: "https://www.youtube.com/embed/5mnanvJGPvw",
-{
-name: "Snake Mania",
-description: "A simple static game made with HTML, CSS & JavaScript. Fun to play with a cool interface.",
-link: "https://snake-mania-black.vercel.app/",
-youtubeUrl: "https://www.youtube.com/watch?v=yCJZb51Lhs0"
-},
-{
-name: "Play Ludo Try Luck",
-description: "Created with HTML, CSS, and JavaScript. Four players can play simultaneously.",
-link: "https://ludo-sigma-ten.vercel.app/",
-youtubeUrl: "https://www.youtube.com/embed/yCJZb51Lhs0"
-},
-{
-name: "Try Math Problems - Play Math Quiz",
-description: "Random math logic questions focused on fast calculations. Created with HTML, CSS, and JavaScript.",
-link: "https://math-quiz-sage.vercel.app/",
-youtubeUrl: "https://www.youtube.com/embed/yCJZb51Lhs0"
-}
+  {
+    name: "Island 3D Portfolio",
+    description: "My first 3D portfolio made with React.js. Simple and static site but designed with gradient color combinations, created some 3D models. Modern and cool look.",
+    link: "https://island-portfolio-delta.vercel.app/",
+    youtubeUrl: "https://www.youtube.com/embed/"
+  },
+  {
+    name: "Full Stack Food Delivery Website",
+    description: "Full stack food delivery site made with MERN. Three sections - frontend, admin and backend. Frontend allows users to login, add food items to cart, etc. Admin can manage users and items.",
+    link: "https://food-delivery-ruddy-five-32.vercel.app/",
+    youtubeUrl: "https://www.youtube.com/embed/UsKqKB78z-U"
+  },
+  {
+    name: "Portfolio",
+    description: "My first portfolio made with Next.js. Simple and static site with a few interactive sections. Modern and cool look.",
+    link: "https://portfolio-821i.vercel.app/",
+    youtubeUrl: "https://www.youtube.com/embed/5mnanvJGPvw"
+  },
+  {
+    name: "Snake Mania",
+    description: "A simple static game made with HTML, CSS & JavaScript. Fun to play with a cool interface.",
+    link: "https://snake-mania-black.vercel.app/",
+    youtubeUrl: "https://www.youtube.com/embed/yCJZb51Lhs0"
+  },
+  {
+    name: "Play Ludo Try Luck",
+    description: "Created with HTML, CSS, and JavaScript. Four players can play simultaneously.",
+    link: "https://ludo-sigma-ten.vercel.app/",
+    youtubeUrl: "https://www.youtube.com/embed/yCJZb51Lhs0"
+  },
+  {
+    name: "Try Math Problems - Play Math Quiz",
+    description: "Random math logic questions focused on fast calculations. Created with HTML, CSS, and JavaScript.",
+    link: "https://math-quiz-sage.vercel.app/",
+    youtubeUrl: "https://www.youtube.com/embed/yCJZb51Lhs0"
+  }
 ];
