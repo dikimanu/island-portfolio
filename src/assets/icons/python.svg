@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512"
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Python programming icon</title>
+  <desc id="desc">Stylized snake-shaped Python-inspired icon with blue and yellow halves in a circular badge.</desc>
+
+  <!-- Soft shadow -->
+  <ellipse cx="256" cy="420" rx="150" ry="32" fill="#000" opacity="0.08"/>
+
+  <!-- Background gradient circle -->
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+
+    <linearGradient id="blue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#4B8BBE"/>
+      <stop offset="1" stop-color="#306998"/>
+    </linearGradient>
+
+    <linearGradient id="yellow" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0" stop-color="#FFE873"/>
+      <stop offset="1" stop-color="#FFD43B"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="256" cy="240" r="200" fill="url(#bg)" />
+
+  <!-- Upper (blue) snake -->
+  <path d="
+    M190 170
+    C190 120, 230 90, 290 90
+    H350
+    C380 90, 400 110, 400 140
+    V200
+    C400 240, 360 260, 300 260
+    H210
+    C200 260, 190 250, 190 240
+    Z"
+    fill="url(#blue)" />
+
+  <!-- Lower (yellow) snake -->
+  <path d="
+    M322 310
+    C322 360, 282 390, 222 390
+    H160
+    C130 390, 110 370, 110 340
+    V280
+    C110 240, 150 220, 210 220
+    H300
+    C310 220, 322 230, 322 240
+    Z"
+    fill="url(#yellow)" />
+
+  <!-- Eyes -->
+  <circle cx="265" cy="155" r="10" fill="#ffffff" opacity="0.9"/>
+  <circle cx="235" cy="340" r="10" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Subtle inner circular ring -->
+  <circle cx="256" cy="240" r="170" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="10"/>
+</svg>

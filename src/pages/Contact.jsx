@@ -1,29 +1,22 @@
-import emailjs from "@emailjs/browser";
-import { Canvas } from "@react-three/fiber";
-import { Suspense, useRef, useState } from "react";
-
-import { Fox } from "../models";
+import React, { useRef, useState } from "react";
+import { Alert } from "../components";
+import EarthCanvas from "../models/EarthCanvas";
+import StarsCanvas from "../models/StarsCanvas";
 import useAlert from "../hooks/useAlert";
-import { Alert, Loader } from "../components";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
-  const [currentAnimation, setCurrentAnimation] = useState("idle");
 
-  const handleChange = ({ target: { name, value } }) => {
+  const handleChange = ({ target: { name, value } }) =>
     setForm({ ...form, [name]: value });
-  };
-
-  const handleFocus = () => setCurrentAnimation("walk");
-  const handleBlur = () => setCurrentAnimation("idle");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setCurrentAnimation("hit");
 
     emailjs
       .send(
@@ -46,22 +39,12 @@ const Contact = () => {
             text: "Thank you for your message 😃",
             type: "success",
           });
-
-          setTimeout(() => {
-            hideAlert(false);
-            setCurrentAnimation("idle");
-            setForm({
-              name: "",
-              email: "",
-              message: "",
-            });
-          }, [3000]);
+          setForm({ name: "", email: "", message: "" });
+          setTimeout(() => hideAlert(false), 3000);
         },
         (error) => {
           setLoading(false);
           console.error(error);
-          setCurrentAnimation("idle");
-
           showAlert({
             show: true,
             text: "I didn't receive your message 😢",
@@ -72,100 +55,100 @@ const Contact = () => {
   };
 
   return (
-    <section className='relative flex lg:flex-row flex-col max-container'>
+    <section className="relative flex xl:flex-row flex-col gap-10 max-container py-20 min-h-screen overflow-hidden bg-gradient-to-r from-black 
+        via-gray-800  to-black">
+
+      {/* ⭐ FULL BACKGROUND STARS */}
+      <StarsCanvas />
+
       {alert.show && <Alert {...alert} />}
 
-      <div className='flex-1 min-w-[50%] flex flex-col'>
-        <h1 className='head-text'>Get in Touch</h1>
+      {/* ⭐ GLASS FORM CARD */}
+      <div className="flex-[0.75] 
+        bg-white/5 backdrop-blur-xl 
+        border border-white/10 
+        p-10 rounded-3xl z-10 
+        shadow-[0_0_30px_rgba(128,0,255,0.15)]">
+
+        <h2 className="text-white text-4xl font-bold mb-2">
+          Contact Me
+        </h2>
+        <p className="text-gray-300 mb-10">
+          Let’s get in touch! 🚀
+        </p>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='w-full flex flex-col gap-7 mt-14'
+          className="flex flex-col gap-8"
         >
-          <label className='text-black-500 font-semibold'>
-            Name
+          {/* Name */}
+          <label className="flex flex-col">
+            <span className="text-gray-200 font-medium mb-2">Your Name</span>
             <input
-              type='text'
-              name='name'
-              className='input'
-              placeholder='John'
-              required
+              type="text"
+              name="name"
               value={form.name}
               onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-          </label>
-          <label className='text-black-500 font-semibold'>
-            Email
-            <input
-              type='email'
-              name='email'
-              className='input'
-              placeholder='John@gmail.com'
-              required
-              value={form.email}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-          </label>
-          <label className='text-black-500 font-semibold'>
-            Your Message
-            <textarea
-              name='message'
-              rows='4'
-              className='textarea'
-              placeholder='Write your thoughts here...'
-              value={form.message}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
+              placeholder="John Doe"
+              className="bg-[#111] border border-[#333] 
+                text-white px-6 py-4 rounded-xl 
+                focus:border-purple-500 focus:ring-2 focus:ring-purple-600 
+                outline-none transition placeholder-gray-500"
             />
           </label>
 
+          {/* Email */}
+          <label className="flex flex-col">
+            <span className="text-gray-200 font-medium mb-2">Your Email</span>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="john@gmail.com"
+              className="bg-[#111] border border-[#333] 
+                text-white px-6 py-4 rounded-xl 
+                focus:border-purple-500 focus:ring-2 focus:ring-purple-600
+                outline-none transition placeholder-gray-500"
+            />
+          </label>
+
+          {/* Message */}
+          <label className="flex flex-col">
+            <span className="text-gray-200 font-medium mb-2">Your Message</span>
+            <textarea
+              rows="6"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="Write something..."
+              className="bg-[#111] border border-[#333] 
+                text-white px-6 py-4 rounded-xl 
+                focus:border-purple-500 focus:ring-2 focus:ring-purple-600
+                outline-none transition placeholder-gray-500"
+            />
+          </label>
+
+          {/* Button */}
           <button
-            type='submit'
+            type="submit"
             disabled={loading}
-            className='btn'
-            onFocus={handleFocus}
-            onBlur={handleBlur}
+            className="w-fit px-10 py-4 rounded-xl 
+              bg-gradient-to-r from-purple-600 to-indigo-600 
+              text-white font-semibold shadow-lg shadow-purple-800/40
+              hover:opacity-90 transition active:scale-95"
           >
-            {loading ? "Sending..." : "Submit"}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
 
-      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
-        <Canvas
-          camera={{
-            position: [0, 0, 5],
-            fov: 75,
-            near: 0.1,
-            far: 1000,
-          }}
-        >
-          <directionalLight position={[0, 0, 1]} intensity={2.5} />
-          <ambientLight intensity={1} />
-          <pointLight position={[5, 10, 0]} intensity={2} />
-          <spotLight
-            position={[10, 10, 10]}
-            angle={0.15}
-            penumbra={1}
-            intensity={2}
-          />
-
-          <Suspense fallback={<Loader />}>
-            <Fox
-              currentAnimation={currentAnimation}
-              position={[0.5, 0.35, 0]}
-              rotation={[12.629, -0.6, 0]}
-              scale={[0.5, 0.5, 0.5]}
-            />
-          </Suspense>
-        </Canvas>
+      {/* ⭐ EARTH MODEL */}
+      <div className="xl:flex-1 xl:h-auto md:h-[500px] h-[350px] z-10">
+        <EarthCanvas />
       </div>
+
     </section>
   );
 };

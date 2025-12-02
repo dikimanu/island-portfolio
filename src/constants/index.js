@@ -1,228 +1,155 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
-    car,
-    contact,
     css,
-    estate,
     express,
     git,
     github,
     html,
     javascript,
-    linkedin,
     mongodb,
-    motion,
-    mui,
     nextjs,
     nodejs,
-    pricewise,
     react,
-    redux,
-    sass,
-    snapgram,
-    summiz,
-    tailwindcss,
-    threads,
-    typescript
+    linkedin,
+    twitter,
+    arrow,
+    contact,
+    soundon,
+    soundoff,
+    linux,
+    cprogramming,
+    python,
+     instagram,
+    facebook,
+    youtube
 } from "../assets/icons";
 
+/* ------------------------------------ */
+/*               SKILLS                 */
+/* ------------------------------------ */
 export const skills = [
-    {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
-    },
-    {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
-    {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
-    }
+  { imageUrl: html, name: "HTML", type: "Frontend" },
+  { imageUrl: css, name: "CSS", type: "Frontend" },
+  { imageUrl: javascript, name: "JavaScript", type: "Frontend" },
+  { imageUrl: react, name: "React.js", type: "Frontend" },
+  { imageUrl: nodejs, name: "Node.js", type: "Backend" },
+  { imageUrl: express, name: "Express.js", type: "Backend" },
+  { imageUrl: mongodb, name: "MongoDB", type: "Database" },
+  { imageUrl: git, name: "Git", type: "Version Control" },
+  { imageUrl: github, name: "GitHub", type: "Version Control" },
+  { imageUrl: python, name: "Python", type: "Version Control" }, 
+  { imageUrl: cprogramming, name: "CProgramming", type: "Version Control" }, 
+  { imageUrl: linux, name: "linux", type: "Version Control" } 
 ];
 
+/* ------------------------------------ */
+/*             EXPERIENCE                */
+/* ------------------------------------ */
 export const experiences = [
-    {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+ 
+  // WORKSHOP 1
+  {
+    title: "Workshop - Advanced Excel for Manufacturing Growth",
+    company_name: "AI Labs",
+    date: "2025",
+    certificateUrl: "/certificates/ai-labs-excel.jpg",
+    points: [
+      "Learned advanced Excel formulas, pivot tables, and data automation.",
+      "Explored KPI-based dashboards for manufacturing-related analytics."
+    ]
+  },
+
+  // WORKSHOP 2
+  {
+    title: "Workshop - Linux Based C with DSA",
+    company_name: "AI Labs",
+    date: "2025",
+    certificateUrl: "/certificates/ai-labs-linux-c-dsa.jpg",
+    points: [
+      "Strengthened core C programming concepts in a Linux environment.",
+      "Practiced Data Structures & Algorithms including arrays, stacks, queues, and linked lists."
+    ]
+  },
+
+  // COURSE 1
+  {
+    title: "Cloud Computing (Certified)",
+    company_name: "Udemy",
+    iconBg: "#a2d2ff",
+    date: "2024",
+    certificateUrl: "/certificates/udemy-cloud.jpg",
+    points: [
+      "Learned fundamentals of cloud architecture and virtualization.",
+      "Completed labs related to AWS, deployment, and service models."
+    ]
+  },
+
+  // COURSE 2
+  {
+    title: "Blockchain Fundamentals (Certified)",
+    company_name: "Infosys Springboard",
+    date: "2025",
+    certificateUrl: "/certificates/infosys-blockchain.jpg",
+    points: [
+      "Studied hashing, decentralization, consensus models, and smart contracts.",
+      "Explored real-world applications such as crypto and supply chain solutions."
+    ]
+  },
+   {
+    title: "Internship - Linux for Present & Future",
+    company_name: "WEBEL",
+    date: "2025",
+    certificateUrl: "/certificates/webel-linux.jpg",
+    points: [
+      "Completed hands-on training focused on essential Linux commands.",
+      "Gained practical experience in file systems, permissions, and process management.",
+      "Worked in a real-world Linux environment aligned with industry workflows."
+    ]
+  }
 ];
 
+/* ------------------------------------ */
+/*             SOCIAL LINKS              */
+/* ------------------------------------ */
 export const socialLinks = [
-    {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
-    },
-    {
-        name: 'GitHub',
-        iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
-    },
-    {
-        name: 'LinkedIn',
-        iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
-    }
+  { name: "Contact", iconUrl: contact, link: "/contact" },
+  { name: "GitHub", iconUrl: github, link: "https://github.com/dikimanu" },
+  { name: "LinkedIn", iconUrl: linkedin, link: "https://www.linkedin.com/in/satyabrata-pal-03b5a7373/" },
+{ name: "Instagram", iconUrl: instagram, link: "https://www.instagram.com/_satyabrata.pal/?next=%2F" },
+{ name: "Facebook", iconUrl: facebook, link: "https://www.facebook.com/satyabrata.pal.5264" },
+{ name: "YouTube", iconUrl: youtube, link: "https://www.youtube.com/channel/UCk9gczK0GAeSZXUA3st5auw" }
 ];
 
+/* ------------------------------------ */
+/*             PROJECTS                  */
+/* ------------------------------------ */
 export const projects = [
-    {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
-    {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
-    },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
+{
+name: "Full Stack Food Delivery Website",
+description: "Full stack food delivery site made with MERN. Three sections - frontend, admin and backend. Frontend allows users to login, add food items to cart, etc. Admin can manage users and items.",
+link: "",
+youtubeUrl: "https://www.youtube.com/embed/VIDEO_ID_1"
+},
+{
+name: "Portfolio",
+description: "My first portfolio made with Next.js. Simple and static site with a few interactive sections. Modern and cool look.",
+link: "https://portfolio-821i.vercel.app/",
+youtubeUrl: "https://www.youtube.com/embed/5mnanvJGPvw"},
+{
+name: "Snake Mania",
+description: "A simple static game made with HTML, CSS & JavaScript. Fun to play with a cool interface.",
+link: "",
+youtubeUrl: "https://www.youtube.com/embed/VIDEO_ID_3"
+},
+{
+name: "Play Ludo Try Luck",
+description: "Created with HTML, CSS, and JavaScript. Four players can play simultaneously.",
+link: "",
+youtubeUrl: "https://www.youtube.com/embed/VIDEO_ID_4"
+},
+{
+name: "Try Math Problems - Play Math Quiz",
+description: "Random math logic questions focused on fast calculations. Created with HTML, CSS, and JavaScript.",
+link: "",
+youtubeUrl: "https://www.youtube.com/embed/VIDEO_ID_5"
+}
 ];
