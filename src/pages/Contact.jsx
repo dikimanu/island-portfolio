@@ -55,21 +55,28 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative flex xl:flex-row flex-col gap-10 max-container py-20 min-h-screen overflow-hidden bg-gradient-to-r from-black 
-        via-gray-800  to-black">
+    <section className="relative w-full min-h-screen bg-black overflow-hidden flex items-center justify-center py-20">
 
-      {/* ⭐ FULL BACKGROUND STARS */}
-      <StarsCanvas />
+      {/* ⭐ FIXED BACKGROUND — NEVER CROPS, ALWAYS FULLSCREEN */}
+      <div className="fixed inset-0 -z-20 pointer-events-none">
+        <StarsCanvas />
+      </div>
 
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <EarthCanvas />
+      </div>
+
+      {/* ⭐ ALERT */}
       {alert.show && <Alert {...alert} />}
 
-      {/* ⭐ GLASS FORM CARD */}
-      <div className="flex-[0.75] 
+      {/* ⭐ CONTACT CARD */}
+      <div className="
+        w-full max-w-2xl mx-auto
         bg-white/5 backdrop-blur-xl 
         border border-white/10 
         p-10 rounded-3xl z-10 
-        shadow-[0_0_30px_rgba(128,0,255,0.15)]">
-
+        shadow-[0_0_30px_rgba(128,0,255,0.15)]
+      ">
         <h2 className="text-white text-4xl font-bold mb-2">
           Contact Me
         </h2>
@@ -82,7 +89,7 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className="flex flex-col gap-8"
         >
-          {/* Name */}
+          {/* NAME */}
           <label className="flex flex-col">
             <span className="text-gray-200 font-medium mb-2">Your Name</span>
             <input
@@ -98,7 +105,7 @@ const Contact = () => {
             />
           </label>
 
-          {/* Email */}
+          {/* EMAIL */}
           <label className="flex flex-col">
             <span className="text-gray-200 font-medium mb-2">Your Email</span>
             <input
@@ -114,7 +121,7 @@ const Contact = () => {
             />
           </label>
 
-          {/* Message */}
+          {/* MESSAGE */}
           <label className="flex flex-col">
             <span className="text-gray-200 font-medium mb-2">Your Message</span>
             <textarea
@@ -130,7 +137,7 @@ const Contact = () => {
             />
           </label>
 
-          {/* Button */}
+          {/* SEND BUTTON */}
           <button
             type="submit"
             disabled={loading}
@@ -143,12 +150,6 @@ const Contact = () => {
           </button>
         </form>
       </div>
-
-      {/* ⭐ EARTH MODEL */}
-      <div className="xl:flex-1 xl:h-auto md:h-[500px] h-[350px] z-10">
-        <EarthCanvas />
-      </div>
-
     </section>
   );
 };
