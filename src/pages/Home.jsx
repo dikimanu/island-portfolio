@@ -1,3 +1,4 @@
+// Updated Home.jsx with sound button moved to top-left and made smaller
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 
@@ -16,50 +17,30 @@ const Home = () => {
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
   useEffect(() => {
-    if (isPlayingMusic) {
-      audioRef.current.play();
-    }
-
-    return () => {
-      audioRef.current.pause();
-    };
+    if (isPlayingMusic) audioRef.current.play();
+    return () => audioRef.current.pause();
   }, [isPlayingMusic]);
 
   const adjustBiplaneForScreenSize = () => {
-    let screenScale, screenPosition;
-
-    // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, -1.5, 0];
-    } else {
-      screenScale = [3, 3, 3];
-      screenPosition = [0, -4, -4];
+      return [[1.2, 1.2, 1.2], [0, -1, 0]];
     }
-
-    return [screenScale, screenPosition];
+    return [[3, 3, 3], [0, -4, -4]];
   };
 
   const adjustIslandForScreenSize = () => {
-    let screenScale, screenPosition;
-
     if (window.innerWidth < 768) {
-      screenScale = [0.9, 0.9, 0.9];
-      screenPosition = [0, -6.5, -43.4];
-    } else {
-      screenScale = [1, 1, 1];
-      screenPosition = [0, -6.5, -43.4];
+      return [[0.75, 0.75, 0.75], [0, -5.5, -40]];
     }
-
-    return [screenScale, screenPosition];
+    return [[1, 1, 1], [0, -6.5, -43.4]];
   };
 
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
 
   return (
-    <section className='w-full h-screen relative'>
-      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+    <section className="w-full h-screen relative overflow-hidden">
+      <div className="absolute top-20 md:top-28 left-0 right-0 z-10 flex items-center justify-center px-2">
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
 
@@ -73,17 +54,8 @@ const Home = () => {
           <directionalLight position={[1, 1, 1]} intensity={2} />
           <ambientLight intensity={0.5} />
           <pointLight position={[10, 5, 10]} intensity={2} />
-          <spotLight
-            position={[0, 50, 10]}
-            angle={0.15}
-            penumbra={1}
-            intensity={2}
-          />
-          <hemisphereLight
-            skyColor='#b1e1ff'
-            groundColor='#000000'
-            intensity={1}
-          />
+          <spotLight position={[0, 50, 10]} angle={0.15} penumbra={1} intensity={2} />
+          <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
 
           <Bird />
           <Sky isRotating={isRotating} />
@@ -104,12 +76,13 @@ const Home = () => {
         </Suspense>
       </Canvas>
 
-      <div className='absolute bottom-2 left-2'>
+      {/* SOUND BUTTON - moved to top-left & made smaller */}
+      <div className="absolute top-4 left-4 z-20">
         <img
           src={!isPlayingMusic ? soundoff : soundon}
-          alt='jukebox'
+          alt="jukebox"
           onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-          className='w-10 h-10 cursor-pointer object-contain'
+          className="w-6 h-6 md:w-7 md:h-7 cursor-pointer object-contain opacity-90 hover:opacity-100 transition"
         />
       </div>
     </section>

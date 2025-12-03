@@ -36,7 +36,7 @@ const Stars = (props) => {
 // Earth model
 const EarthModel = (props) => {
   const { scene } = useGLTF("/planet/scene.gltf");
-  return <primitive object={scene} scale={2.2} {...props} />;
+  return <primitive object={scene} scale={2.0} {...props} />;
 };
 
 // Main Canvas: Stars + Earth

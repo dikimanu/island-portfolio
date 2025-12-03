@@ -24,9 +24,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Satyabrata Pal",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "satyabratapal50@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -55,36 +55,39 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative flex xl:flex-row flex-col gap-10 max-container py-20 min-h-screen overflow-hidden bg-gradient-to-r from-black 
-        via-gray-800  to-black">
-
-      {/* ⭐ FULL BACKGROUND STARS */}
+    <section
+      className="relative flex flex-col gap-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 
+      min-h-screen overflow-hidden bg-gradient-to-r from-black via-gray-800 to-black"
+    >
+      {/* Background Stars */}
       <StarsCanvas />
 
       {alert.show && <Alert {...alert} />}
 
-      {/* ⭐ GLASS FORM CARD */}
-      <div className="flex-[0.75] 
-        bg-white/5 backdrop-blur-xl 
-        border border-white/10 
-        p-10 rounded-3xl z-10 
-        shadow-[0_0_30px_rgba(128,0,255,0.15)]">
-
-        <h2 className="text-white text-4xl font-bold mb-2">
+      {/* Contact Form */}
+      <div
+        className="w-full lg:w-full lg:order-1 
+        bg-white/5 backdrop-blur-xl border border-white/10 
+        p-6 sm:p-10 rounded-3xl z-10 
+        shadow-[0_0_30px_rgba(128,0,255,0.15)]"
+      >
+        <h2 className="text-white text-3xl sm:text-4xl font-bold mb-2">
           Contact Me
         </h2>
-        <p className="text-gray-300 mb-10">
+        <p className="text-gray-300 mb-8 sm:mb-10 text-sm sm:text-base">
           Let’s get in touch! 🚀
         </p>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-6 sm:gap-8"
         >
           {/* Name */}
           <label className="flex flex-col">
-            <span className="text-gray-200 font-medium mb-2">Your Name</span>
+            <span className="text-gray-200 font-medium mb-2 text-sm sm:text-base">
+              Your Name
+            </span>
             <input
               type="text"
               name="name"
@@ -92,15 +95,17 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="John Doe"
               className="bg-[#111] border border-[#333] 
-                text-white px-6 py-4 rounded-xl 
-                focus:border-purple-500 focus:ring-2 focus:ring-purple-600 
-                outline-none transition placeholder-gray-500"
+              text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl 
+              focus:border-purple-500 focus:ring-2 focus:ring-purple-600 
+              outline-none transition placeholder-gray-500"
             />
           </label>
 
           {/* Email */}
           <label className="flex flex-col">
-            <span className="text-gray-200 font-medium mb-2">Your Email</span>
+            <span className="text-gray-200 font-medium mb-2 text-sm sm:text-base">
+              Your Email
+            </span>
             <input
               type="email"
               name="email"
@@ -108,15 +113,17 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="john@gmail.com"
               className="bg-[#111] border border-[#333] 
-                text-white px-6 py-4 rounded-xl 
-                focus:border-purple-500 focus:ring-2 focus:ring-purple-600
-                outline-none transition placeholder-gray-500"
+              text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl
+              focus:border-purple-500 focus:ring-2 focus:ring-purple-600
+              outline-none transition placeholder-gray-500"
             />
           </label>
 
           {/* Message */}
           <label className="flex flex-col">
-            <span className="text-gray-200 font-medium mb-2">Your Message</span>
+            <span className="text-gray-200 font-medium mb-2 text-sm sm:text-base">
+              Your Message
+            </span>
             <textarea
               rows="6"
               name="message"
@@ -124,9 +131,9 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="Write something..."
               className="bg-[#111] border border-[#333] 
-                text-white px-6 py-4 rounded-xl 
-                focus:border-purple-500 focus:ring-2 focus:ring-purple-600
-                outline-none transition placeholder-gray-500"
+              text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl
+              focus:border-purple-500 focus:ring-2 focus:ring-purple-600
+              outline-none transition placeholder-gray-500"
             />
           </label>
 
@@ -134,21 +141,20 @@ const Contact = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-fit px-10 py-4 rounded-xl 
-              bg-gradient-to-r from-purple-600 to-indigo-600 
-              text-white font-semibold shadow-lg shadow-purple-800/40
-              hover:opacity-90 transition active:scale-95"
+            className="w-fit px-8 sm:px-10 py-3 sm:py-4 rounded-xl 
+            bg-gradient-to-r from-purple-600 to-indigo-600 
+            text-white font-semibold shadow-lg shadow-purple-800/40
+            hover:opacity-90 transition active:scale-95 text-sm sm:text-base"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
 
-      {/* ⭐ EARTH MODEL */}
-      <div className="xl:flex-1 xl:h-auto md:h-[500px] h-[350px] z-10">
+      {/* Earth Model - smaller and below form on desktop */}
+      <div className="w-full lg:w-1/2 lg:mt-6 h-[300px] sm:h-[400px] md:h-[400px] lg:h-[350px] z-10 mx-auto order-2">
         <EarthCanvas />
       </div>
-
     </section>
   );
 };

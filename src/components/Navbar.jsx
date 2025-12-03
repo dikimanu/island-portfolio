@@ -3,7 +3,7 @@ import { logo } from "../assets/images";
 
 const Navbar = () => {
   const buttonStyle = (isActive, gradient) => `
-    px-6 py-3 font-bold rounded-xl text-white text-lg
+    px-4 py-2 md:px-6 md:py-3 font-bold rounded-xl text-white text-base md:text-lg
     bg-gradient-to-br ${gradient}
     shadow-[0_5px_15px_rgba(0,0,0,0.5),inset_0_2px_4px_rgba(255,255,255,0.3)]
     transform transition-all duration-200
@@ -18,12 +18,16 @@ const Navbar = () => {
   `;
 
   return (
-    <header className="header flex items-center justify-between p-4 bg-gray-100">
+    <header className="header flex items-center justify-between p-3 bg-gray-100 md:p-4">
       <NavLink to="/">
-        <img src={logo} alt="logo" className="w-16 h-16 object-contain" />
+        <img
+          src={logo}
+          alt="logo"
+          className="w-12 h-12 md:w-16 md:h-16 object-contain"
+        />
       </NavLink>
 
-      <nav className="flex gap-4">
+      <nav className="flex gap-3 md:gap-4">
         <NavLink
           to="/about"
           className={({ isActive }) =>
