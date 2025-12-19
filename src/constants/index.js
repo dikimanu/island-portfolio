@@ -145,18 +145,18 @@ export const projects = [
     name: "Snake Mania",
     description: "A simple static game made with HTML, CSS & JavaScript. Fun to play with a cool interface.",
     link: "https://snake-mania-black.vercel.app/",
-    youtubeUrl: "https://www.youtube.com/embed/yCJZb51Lhs0"
+    youtubeUrl: "https://www.youtube.com/embed/lL9KNIwbde8"
   },
   {
     name: "Play Ludo Try Luck",
     description: "Created with HTML, CSS, and JavaScript. Four players can play simultaneously.",
     link: "https://ludo-sigma-ten.vercel.app/",
-    youtubeUrl: "https://www.youtube.com/embed/yCJZb51Lhs0"
+    youtubeUrl: "https://www.youtube.com/embed/Q0iQlN1Tx64"
   },
   {
     name: "Try Math Problems - Play Math Quiz",
     description: "Random math logic questions focused on fast calculations. Created with HTML, CSS, and JavaScript.",
     link: "https://math-quiz-sage.vercel.app/",
-    youtubeUrl: "https://www.youtube.com/embed/yCJZb51Lhs0"
+    youtubeUrl: "https://www.youtube.com/embed/31YzhXHZiSo"
   }
 ];
