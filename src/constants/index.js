@@ -124,10 +124,16 @@ export const socialLinks = [
 /* ------------------------------------ */
 export const projects = [
   {
+    name: "File Encryption Decryption",
+    description: "Designed and implemented a secure file encryption and decryption system using Python with a Tkinter-based graphical interface. The application utilizes AES-GCM for authenticated encryption, Fernet for secure key management, and SHA-256 for hashing and data integrity verification.",
+    link: "https://file-enc-dec.vercel.app/",
+    youtubeUrl: "https://www.youtube.com/embed/qyDxAq-2920"
+  },
+  {
     name: "Island 3D Portfolio",
     description: "My first 3D portfolio made with React.js. Simple and static site but designed with gradient color combinations, created some 3D models. Modern and cool look.",
     link: "https://island-portfolio-delta.vercel.app/",
-    youtubeUrl: "https://www.youtube.com/embed/"
+    youtubeUrl: "https://www.youtube.com/embed/3tKkdg-VLYc"
   },
   {
     name: "Full Stack Food Delivery Website",
