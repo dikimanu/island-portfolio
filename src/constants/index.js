@@ -124,50 +124,50 @@ export const socialLinks = [
 /* ------------------------------------ */
 export const projects = [
    {
-    name: "",
-    description: "",
+    name: "Social Media App",
+    description: "This is a fully functional demo application built using the MERN stack, inspired by modern social media platforms. It implements secure authentication using Clerk for user sign-up and sign-in, and utilizes MongoDB for efficient storage of user profiles, feeds, and stories. The project demonstrates scalable architecture, RESTful APIs, and modern frontend practices.",
     link: "https://social-media-web-eta.vercel.app",
-    youtubeUrl: "https://www.youtube.com/embed/"
+    youtubeUrl: "https://www.youtube.com/embed/kZNsS32-HUY"
   },
   {
     name: "File Encryption Decryption",
-    description: "Designed and implemented a secure file encryption and decryption system using Python with a Tkinter-based graphical interface. The application utilizes AES-GCM for authenticated encryption, Fernet for secure key management, and SHA-256 for hashing and data integrity verification.",
+    description: "Designed and developed a secure file encryption and decryption application using Python with a Tkinter-based GUI. Implemented AES-GCM for authenticated encryption, Fernet for secure key management, and SHA-256 hashing to ensure data integrity and security.",
     link: "https://file-enc-dec.vercel.app/",
     youtubeUrl: "https://www.youtube.com/embed/qyDxAq-2920"
   },
   {
     name: "Island 3D Portfolio",
-    description: "My first 3D portfolio made with React.js. Simple and static site but designed with gradient color combinations, created some 3D models. Modern and cool look.",
+    description: "Developed a 3D personal portfolio website using React.js. The site features a clean, modern design with gradient color schemes, custom 3D models, and a visually engaging yet lightweight static architecture.",
     link: "https://island-portfolio-delta.vercel.app/",
     youtubeUrl: "https://www.youtube.com/embed/3tKkdg-VLYc"
   },
   {
     name: "Full Stack Food Delivery Website",
-    description: "Full stack food delivery site made with MERN. Three sections - frontend, admin and backend. Frontend allows users to login, add food items to cart, etc. Admin can manage users and items.",
+    description: "Developed a full-stack food delivery application using the MERN stack, consisting of three modules: frontend, admin, and backend. The frontend enables users to authenticate, browse menus, and add food items to the cart, while the admin panel provides tools to manage users, food items, and platform content. The backend handles APIs, authentication, and data management.",
     link: "https://food-delivery-ruddy-five-32.vercel.app/",
     youtubeUrl: "https://www.youtube.com/embed/UsKqKB78z-U"
   },
   {
     name: "Portfolio",
-    description: "My first portfolio made with Next.js. Simple and static site with a few interactive sections. Modern and cool look.",
+    description: "Built a personal portfolio website using Next.js. The project is a simple, static site featuring a modern, clean design with a few interactive sections to enhance user engagement and overall visual appeal.",
     link: "https://portfolio-821i.vercel.app/",
     youtubeUrl: "https://www.youtube.com/embed/5mnanvJGPvw"
   },
   {
     name: "Snake Mania",
-    description: "A simple static game made with HTML, CSS & JavaScript. Fun to play with a cool interface.",
+    description: "Developed a simple static game using HTML, CSS, and JavaScript, featuring an intuitive and visually engaging user interface designed for an enjoyable gameplay experience.",
     link: "https://snake-mania-black.vercel.app/",
     youtubeUrl: "https://www.youtube.com/embed/lL9KNIwbde8"
   },
   {
     name: "Play Ludo Try Luck",
-    description: "Created with HTML, CSS, and JavaScript. Four players can play simultaneously.",
+    description: "Developed a browser-based multiplayer game using HTML, CSS, and JavaScript that supports simultaneous gameplay for up to four players.",
     link: "https://ludo-sigma-ten.vercel.app/",
     youtubeUrl: "https://www.youtube.com/embed/Q0iQlN1Tx64"
   },
   {
     name: "Try Math Problems - Play Math Quiz",
-    description: "Random math logic questions focused on fast calculations. Created with HTML, CSS, and JavaScript.",
+    description: "Developed a browser-based math logic quiz application focused on rapid mental calculations using HTML, CSS, and JavaScript.",
     link: "https://math-quiz-sage.vercel.app/",
     youtubeUrl: "https://www.youtube.com/embed/31YzhXHZiSo"
   }
