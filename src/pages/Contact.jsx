@@ -188,7 +188,7 @@ const Contact = () => {
           <div className="flex gap-6">
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/your-linkedin"
+              href="https://www.linkedin.com/in/satyabrata-pal-03b5a7373"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -199,7 +199,7 @@ const Contact = () => {
 
             {/* Email */}
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:satyabratapal50@example.com"
               aria-label="Email"
               className="text-gray-400 hover:text-white transition transform hover:-translate-y-1"
             >
@@ -208,7 +208,7 @@ const Contact = () => {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com/your-instagram"
+              href="https://www.instagram.com/_satyabrata.pal"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
