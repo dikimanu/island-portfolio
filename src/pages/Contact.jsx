@@ -199,7 +199,7 @@ const Contact = () => {
 
             {/* Email */}
             <a
-              href="mailto:satyabratapal50@example.com"
+              href="mailto:satyabratapal50@gmail.com"
               aria-label="Email"
               className="text-gray-400 hover:text-white transition transform hover:-translate-y-1"
             >
