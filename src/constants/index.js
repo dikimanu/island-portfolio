@@ -111,7 +111,7 @@ export const experiences = [
 /*             SOCIAL LINKS              */
 /* ------------------------------------ */
 export const socialLinks = [
-  { name: "Contact", iconUrl: contact, link: "/contact" },
+  { name: "Contact", iconUrl: contact, link: "satyabratapal50@gmail.com" },
   { name: "GitHub", iconUrl: github, link: "https://github.com/dikimanu" },
   { name: "LinkedIn", iconUrl: linkedin, link: "https://www.linkedin.com/in/satyabrata-pal-03b5a7373/" },
 { name: "Instagram", iconUrl: instagram, link: "https://www.instagram.com/_satyabrata.pal/?next=%2F" },
@@ -123,6 +123,12 @@ export const socialLinks = [
 /*             PROJECTS                  */
 /* ------------------------------------ */
 export const projects = [
+   {
+    name: "File Encryption Decryption",
+    description: "Designed and implemented a secure file encryption and decryption system using Python with a Tkinter-based graphical interface. The application utilizes AES-GCM for authenticated encryption, Fernet for secure key management, and SHA-256 for hashing and data integrity verification.",
+    link: "https://file-enc-dec.vercel.app/",
+    youtubeUrl: "https://www.youtube.com/embed/qyDxAq-2920"
+  },
   {
     name: "File Encryption Decryption",
     description: "Designed and implemented a secure file encryption and decryption system using Python with a Tkinter-based graphical interface. The application utilizes AES-GCM for authenticated encryption, Fernet for secure key management, and SHA-256 for hashing and data integrity verification.",
